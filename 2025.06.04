@@ -1,0 +1,80 @@
+/*#include<cstdio>
+using namespace std;
+int main()
+{
+	int i;
+	long long l;
+	char c;
+	double d;
+	char s[100];
+	scanf("%c %d %lld %lf %s",&c,&i,&l,&d,s);
+	printf("%s %.1lf %lld %d %c",s,d,l,i,c);
+	return 0;
+ }*/
+/*#include<cstdio>
+using namespace std;
+int main()
+{
+	int h,m,s;
+	
+	scanf("%d %d %d",&h,&m,&s);
+	int sum=h*3600+m*60+s;
+	int t;
+	int i;
+	scanf("%d",&t);
+	//printf("%d",t-i);
+	sum=sum-t;
+	h=sum/3600;
+	sum=sum%3600;
+	m=sum/60;
+	sum=sum%60;
+	t=sum;
+	printf("%d %d %d",h,m,s);
+	
+	
+}*/  
+/*#include<cstdio>
+using namespace std;
+int main()
+{
+	int n;
+	int s=0;
+	scanf("%d",&n);
+	s=s+n%10;
+	n=n/10;
+	s=s+n%10;
+	n=n/10;
+	s=s+n%10;
+	n=n/10;
+	s=s+n%10;
+	n=n/10;
+	printf("%d",s);
+}*/
+#include<cstdio>
+using namespace std;
+int main()
+{
+	int a,b,c,d;
+	int sum=a+b+c+d;
+	scanf("%d %d %d %d",&a,&b,&c,&d);
+	if(sum==3)
+	{
+		printf("A");
+	}
+	if(sum==2)
+	{
+		printf("B");
+	}
+	if(sum==1)
+	{
+		printf("C");
+	}
+	if(sum==0)
+	{
+		printf("D");
+	}
+	if(sum==4)
+	{
+		printf("E");
+	}
+}
