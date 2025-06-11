@@ -1,0 +1,121 @@
+/*#include<cstdio>
+int main()
+{
+	int score;
+	int n;
+	int sum=0;
+	scanf("%d",&n);
+	for(int i=1;i<=n;i++)
+	{
+		scanf("%d",&score);
+		sum+=score;	
+	}
+	sum/=n;
+	if(sum>=80)
+	{
+		printf("easy");
+	}
+	else if(sum>=60)
+	{
+		printf("normal");
+	}
+	else
+	{
+		printf("hard");
+	}
+
+}*/
+/*#include<cstdio>
+int main()
+{
+	int n;
+	int c=0;
+	int a[100010];
+	int s[100010];
+	scanf("%d",&n);
+	for(int i=0;i<n;i++)
+	{
+		int q;
+		scanf("%d",&q);
+		a[i]=q;
+	}
+	for(int i=0;i<n;i++)
+	{
+		int w;
+		scanf("%d",&w);
+		s[i]=w;
+	}
+	for(int i=0;i<n;i++)
+	{
+		if(a[i]==s[i])
+		{
+			c++;
+		}
+	}
+	printf("%d",c);
+	return 0;
+}*/
+/*#include<cstdio>
+int main()
+{
+	int n;
+	int m;
+	int c=0;
+	scanf("%d",&n);
+	scanf("%d",&m);
+	for(int i=n;i<m;i++)
+	{
+		int j;
+		for( j=2;j<i;j++)
+		{
+			if(i%j==0)break;
+		}
+		if(i==j)
+		{
+			c++;	
+		}
+		
+	}
+	printf("%d",c);
+	return 0;
+}*/
+#include<cstdio>
+int main()
+{
+	int a[10];
+	int b[10];
+	for(int i=0;i<10;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	for(int i=0;i<10;i++)
+	{
+		scanf("%d",&b[i]);
+	}
+	int awin=0;
+	int bwin=0;
+	for(int i=0;i<10;i++)
+	{
+		if(a[i]>b[i])
+		{
+			awin++;
+		}
+		if(a[i]<b[i])
+		{
+			bwin++;
+		}
+	}
+	if(awin>bwin)
+	{
+		printf("awin");
+	}
+	if(awin<bwin)
+	{
+		printf("bwin");
+	}
+	if(awin==bwin)
+	{
+		printf("dwin");
+	}
+	
+}
