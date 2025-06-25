@@ -1,0 +1,67 @@
+/*#include<cstdio>
+int main()
+{
+	int arr[101][101];
+	int n,m;
+	scanf("%d %d",&n,&m);
+	int water_x=0;
+	int water_y=0;
+	for(int i=0;i<m;i++)
+	{
+		for(int j=0;j<n;j++)
+		{
+			scanf("%d",&arr[i][j]);
+		}
+	}
+	for(int i=0;i<m;i++)
+	{
+		for(int j=0;j<n;j++)
+		{
+			if(arr[i][j]==2)
+			{
+				water_x=j;
+				water_y=i;
+				if(i+1<m)
+				{
+					if(arr[i+1][j]==0)
+					{
+						arr[i+1][j]=2;
+					}
+					else if(j+1<n)
+					{
+						if(arr[i][j+1]==0)
+						{
+							arr[i][j+1]=2;
+						}
+					}
+				}
+			}
+		}
+	}
+	printf("%d %d",water_x,water_y);
+	return 0;
+}*/
+#include<cstdio>
+#include<vector>
+using namespace std;
+int main()
+{
+	vector <int>v[10001];
+	int n,m;
+	scanf("%d%d",&n,&m);
+	for(int i=0;i<m;i++)
+	{
+		int from,to;
+		scanf("%d%d",&from,&to);
+		v[from].push_back(to);
+	}
+	for(int i=1;i<=n;i++)
+	{
+		for(int j=0;j<v[i].size();j++)
+		{
+			printf("%d ",v[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
