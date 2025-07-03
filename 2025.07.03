@@ -1,0 +1,62 @@
+/*1000번 #include<cstdio>
+int main()
+{
+	int a;
+	int b;
+	scanf("%d",&a);
+	scanf("%d",&b);
+	int sum=a+b;
+	printf("%d",sum);
+}*/
+
+/*2563번 #include<cstdio>
+int main()
+{
+	int map[101][101]={0,};
+	int n;
+	scanf("%d",&n);
+	for(int i=0;i<n;i++)
+	{
+		int x;
+		int y;
+		scanf("%d %d",&x,&y); 
+		for(int j=y;j<y+10;j++)
+		{
+			for(int k=x;k<x+10;k++)
+			{
+				map[j][k]=1;
+			}
+		}
+	}
+	int a=0;
+	for(int i=0;i<101;i++)
+	{
+		for(int j=0;j<101;j++)
+		{
+			a+=map[i][j];
+		}
+	}
+	printf("%d",a);
+	return 0;
+}*/
+
+/*5597번 #include<cstdio>
+int main()
+{
+	int m[31]={0};
+	
+	for(int i=0;i<28;i++)
+	{
+		int a;
+		scanf("%d",&a);
+		m[a]=1;
+	}
+	for(int i=1;i<=30;i++)
+	{
+		if(m[i]==0)
+			printf("%d\n",i);		
+		
+		
+	}
+	
+}*/
