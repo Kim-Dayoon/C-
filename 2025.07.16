@@ -1,0 +1,77 @@
+/*#include<cstdio>
+int main()
+{
+	char str[1000];
+	scanf("%[^\n]",&str);
+	for(int i=0;str[i];i++)
+	{
+		if('A'<=str[i]&&str[i]<='Z')
+		{
+			str[i]=str[i]+32;
+		}
+	}
+	printf("%s",str);
+}*/
+
+/*#include<cstdio>
+int main()
+{
+	char str[1000];
+	int a[26];
+	scanf("%s",&str);
+	for(int i=0;str[i];i++)
+	{
+		if('A'<=str[i]&&str[i]<='Z')
+			{
+				str[i]=str[i]+32;
+			}
+	}
+	for(int i=0;i<26;i++)
+	{
+		a[i]=0;
+	}
+	for(int i=0;str[i];i++)
+	{
+		a[str[i]-'a']+=1;
+	}
+	for(int i=0;i<26;i++)
+	{
+		printf("%d",a[i]);
+	}
+	return 0;
+}*/
+
+/*#include<cstdio>
+int main()
+{
+	char str[1000];
+	int n;
+	scanf("%d",&n);
+	scanf("%s",str);
+	for(int i=0;str[i];i++)
+	{
+		str[i]=str[i]+n;
+		if(str[i]>'Z')
+		{
+			str[i]=str[i]-26;
+		}
+	}
+	printf("%s",str);
+}*/
+
+#include<cstdio>
+int main()
+{
+	char str_a[100000];
+	char str_b[100000];
+	int size,n,answer;
+	int curser=0;
+	scanf("%d%d",&size,&n);
+	scanf("%s",&str_a);
+	
+	for(int i=0;str_a[i];i++)
+	{
+		answer[i+n]
+	}
+	printf("%d",str_b);
+}
