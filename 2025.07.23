@@ -1,0 +1,68 @@
+#include<cstdio>
+#include<cstring>
+int main()
+{
+	char str[100001];
+//	int b(ab,ac);
+//	if(ab>ac)
+//	{
+//		return 0;
+//	}
+	int a;///입력받는 문자열의 개수
+	int count=0; 
+	int check=0;
+	int len;
+	scanf("%d",&a);
+	for(int j=a;j;j++)
+	{
+		scanf("%s",str);
+		len=strlen(str);
+		for(int i=0;i<len/2;i++)
+		{
+			
+			if(str[i]!=str[len-1-i])
+			{
+				check=1;
+				break;
+			}
+		
+		}
+		if(check==0)
+		{
+			count++;
+		}
+	    
+		
+		printf("%d",count);
+    }
+}
+#include<cstdio>
+#include<cstring>
+int main()
+{
+	char c[101];
+	int a;
+	int check=0;
+	char b[101];
+	scanf("%s",&c);
+	scanf("%d",&a);
+	for(int i=0;i<a;i++)
+	{
+		scanf("%s",&b);
+		if(strcmp(c,b)==0)
+		{
+			check=1;
+		}
+ }
+	
+	if(check==1)
+	{
+		printf("yes");
+	}
+	if(check==0)
+	{
+		printf("no");
+	}
+	
+	
+}
