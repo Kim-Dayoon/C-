@@ -1,3 +1,4 @@
+스키테일 암호
 #include<cstdio>
 int main()
 {
@@ -23,7 +24,7 @@ int main()
 	printf("%s",str_encrypt);
 }
 
-
+악필
 #include<cstdio>
 int main()
 {
