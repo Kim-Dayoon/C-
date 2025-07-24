@@ -1,0 +1,34 @@
+#include<cstdio>
+#include<string>
+#include<iostream>
+using namespace std;
+int main()
+{
+	string a;
+	cin>>a;
+	string b;
+	cin>>b;
+	int b_size=b.size();
+	int index=0;
+	while(true)
+	{
+		index=a.find(b);
+		if(index<0)
+		{
+			break;
+		}
+		a= a.substr(0,index) + a.substr(index+b_size,a.size()-(index+b.size()));
+			
+		
+
+	}
+	if(a.size()==0)
+	{
+		printf("ART");
+	}
+	else
+	{
+		cout<<a;
+	}
+	return 0;
+}
