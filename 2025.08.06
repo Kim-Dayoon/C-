@@ -1,0 +1,38 @@
+#include<cstdio>
+int main()
+{
+	char m[100],p[100];
+	scanf("%s",m);
+	scanf("%s",p);
+	for(int i=0;i<14;i++)
+	{
+		if(m[i]>p[i])
+		{
+			printf("sir");break;
+		}
+		else
+		{
+			printf("kid");break;
+		}
+	}
+}
+
+#include<cstdio>
+int main()
+{
+	int a;
+	int m[51];
+	char f[51];
+	int n; 
+	scanf("%d",&n);                               
+	for(int i=0;i<n;i++)
+	{
+		scanf("%d",&a);
+		scanf("%c",&f[a]); 
+	}
+	printf()
+	return 0;
+}
+while(1)
+{
+}
