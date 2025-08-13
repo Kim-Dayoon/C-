@@ -1,0 +1,84 @@
+/*#include<cstdio>
+struct hms{
+	int hour;
+	int minute;
+	int second;
+};
+int main(){
+	hms time{7,19,30};
+	///time.hour=7;
+	///time.minute=19;
+	///time.second=30;
+	printf("%d %d %d",time.hour,time.minute,time.second);
+}*/
+
+/*#include<cstdio>
+struct Point
+{
+	int x,y;
+	bool operator==(Point right)
+	{
+		return x==right.x&&right.y;
+	};
+	Point operator+(Point right)
+	{
+		Point temp={x+right.x,y+right.y};
+		return temp;
+	}
+	Point operator+(int right)
+	{
+		Point temp={x+right,y+right};
+		return temp;
+	};
+};
+int main()
+{
+	Point p1={1,2};
+	Point p2={10,12};
+	printf("%d\n",p1==p2);
+	Point p3=p1+p2;
+	printf("%d %d\n",p3.x,p3.y);
+	Point p4=p1+5;
+	printf("%d %d\n",p4.x,p4.y);
+}*/
+
+#include<cstdio>
+#include<iostream>
+#include<string>
+using namespace std;
+struct attendance_register
+{
+	int ID;
+	string name;
+	int at;
+	int ab;
+};
+int main()
+{
+	int n;
+	int m;
+	char name[10];
+	attendance_register a[10000];
+	scanf("%d",&n);
+	for(int i=0;i<n;i++)
+	{
+		char name[20];
+		scanf("%d %s %d %d",&a[i].ID,&name,&a[i].at,&a[i].ab);
+		a[i].name = name;
+	}
+	scanf("%d",&m);
+		
+	for(int i=0;i<m;i++)
+	{
+		string temp;
+		cin >> temp;
+		int check;
+//		scanf("%s",&a[i].name);
+//		printf("%d %d %d",&a[i].ID,&a[i].at,&a[i].ab);
+		for(int j=0;j<n;j++)
+		{
+			if()
+		}
+		if(check)printf("-1\n");
+	}
+}
