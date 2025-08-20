@@ -1,0 +1,86 @@
+/*#include<cstdio>
+#include<stack>
+#include<queue>
+using namespace std;
+int main()
+{
+	stack <int> a;
+	queue <int> b;
+	int n;
+	for(int i=0;i<10;i++)
+	{
+		scanf("%d",&n);
+		a.push(n);
+		b.push(n);
+	}
+	for(int i=0;i<10;i++)
+	{
+		printf("%d ",a.top());
+		a.pop();
+	}
+	printf("\n");
+	for(int i=0;i<10;i++)
+	{
+		
+		printf("%d ",b.front());
+		b.pop();
+	}
+	
+}*/
+
+/*#include<cstdio>
+#include<stack>
+#include<queue>
+#include<string>
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a;
+	stack <int> n;
+	queue <string> m;
+	scanf("%d",&a);
+	for(int i=0;i<a;i++)
+	{
+		string b;
+		int c;
+		scanf("%d",&c);
+		cin>>b;
+		n.push(c);
+		m.push(b);
+	}
+	while(!n.empty())
+	{
+		printf("%d ",n.top());
+		n.pop();
+	}
+	printf("\n");
+	while(!m.empty())
+	{
+		cout<<m.front();
+		printf(" ");
+		m.pop();
+	}
+	
+	
+}*/
+
+/*#include<cstdio>
+#include<stack>
+using namespace std;
+int main()
+{
+	int a,n;
+	stack <int> s;
+	scanf("%d",&n);
+	for(int i=0;i<n;i++)
+	{
+		scanf("%d",&a);
+		while(!s.empty()&&s.top()<a)
+		{
+			s.pop();
+		}
+		s.push(a);
+	}
+	printf("%d",s.size());
+}*/
