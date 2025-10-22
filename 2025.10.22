@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a,b,d,n;
+	cin >> a >> b >> d >> n;
+	int bug[20001]; // bug[n] n일 째 되는날 살아있는 짚신벌레 수
+	int born[20001]; // born[n] n일 째 태어난 짚신벌레 수  
+	// bug[n] = bug[n-1] + born[n] - dead
+	// born[n] = now
+	int now = 0; // 오늘 낳는 애들. 
+	bug[0] = 1;
+	born[0] = 1;
+	for(int i=1; i<=n; i++)
+	{
+		int old = 0;
+		if (i >= b){
+			old = born[i-b]; // 오늘 늙어서 이제 못 낳는 애들 수 
+		}
+		
+		int newMature = 0;
+		if (i >= a){
+			newMature = born[i-a]; // 오늘 나이가 차서 낳을 수 있는 애들 수 
+		}
+		
+		int dead = 0;
+		if(i >= d){
+			dead =born[i-d]; // 오늘 죽는 애들 
+		}
+		now = (now + newMature-old + 1000) % 1000;
+		
+		born[i]=now;
+		bug[i]=(bug[i-1]+born[i]-dead + 1000) % 1000; 
+	}
+	
+	cout << bug[n];
+}#include<iostream>
+using namespace std;
+int main()
+{
+	int n;
+	cin>>n;
+	int s[n];//n번째 계단의 점수  
+	int a[n];//n번째 계단까지 밟았을때까지의 최대점수  
+	for(int i=0;i<n;i++)
+	{
+		cin>>s[i];
+	}
+	a[0]=s[0];
+	a[1]=s[0] + s[1];
+	for(int i=2;i<n;i++)
+	{
+		a[i]=a[i-1]+s[i];
+		a[i]=a[i-2]+s[i];
+		if(a[i]=a[i-1]+s[i]<a[i]=a[i-2]+s[i])
+	}
+	
+}
