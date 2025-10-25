@@ -1,0 +1,24 @@
+#include<iostream>
+#include<algorithm> 
+
+using namespace std;
+int main()
+{
+	int n;//계단 수  
+	cin>>n;//계단 수 입력  
+	int s[n+1];//n번째 계단의 점수  
+	int a[n+1];//n번째 계단까지 밟았을때까지의 최대점수 
+	for(int i=0;i<n;i++)//계단 수를 입력받기 위한 for문  
+	{
+		cin>>s[i];//점수 입력  
+	}
+	a[0]=s[0]; //초기값 정해주기  
+	a[1]=s[0] + s[1]; 
+	a[2] = max(s[0] + s[2], s[1] + s[2]); 
+	for(int i=3;i<n;i++)
+	{ 
+		a[i]=max(a[i-2]+s[i],a[i-3]+s[i-1]+s[i]);
+	}
+	cout<<a[n-1];
+	
+}
