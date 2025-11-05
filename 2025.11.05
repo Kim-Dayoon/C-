@@ -1,0 +1,85 @@
+/*#include<iostream>
+using namespace std;
+int main()
+{
+	int x,y,a,b,t;
+	cin>>x>>y>>a>>b>>t;
+	int xc=x*2;
+	int yc=y*2;
+	a=(a+t)%xc;
+	b=(b+t)%yc;
+	if(a>x)
+	{
+		a=x-(a-x);
+	}
+	if(b>y)
+	{
+		b=y-(b-y);
+	}
+	cout<<a<<' '<<b;
+}*/
+
+/*#include<iostream>
+using namespace std;
+int main()
+{
+	int a,b;
+	cin>>a>>b;
+	
+	for(int i=a;i<=b;i++)
+	{
+		bool check=true;
+		for(int j=2;j<=i-1;j++)
+		{
+			if(i%j==0)
+			{
+				check=false;
+				break;
+			}
+		}
+		if(check)
+		{
+			cout<<i<<'\n';
+		}
+	}
+}*/
+
+#include<iostream>
+using namespace std;
+int gcd(int a,int b)
+{
+	if(b==0)
+	{
+		return a;
+	}
+	else
+	{
+		return gcd(b,a%b);
+	}
+}
+int main()
+{
+	int n;
+	cin>>n;
+	int tree[n+1];
+	int distance[n];
+	
+	for(int i=0;i<n;i++)
+	{
+		cin>>tree[i];
+	}
+	for(int i=0;i<n-1;i++)
+	{
+		distance[i]=tree[i+1]-tree[i];
+	}
+	int g=distance[0];
+	for(int i=1;i<n;i++)
+	{
+		g = gcd(g,distance[i]);
+	}
+	
+	int answer = ((tree[n-1]-tree[0])/2)+1-n;
+	
+	cout << answer;
+	
+}
