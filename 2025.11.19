@@ -1,0 +1,100 @@
+대표선수 
+#include<cstdio>
+#include<algorithm>
+#include<vector>
+using namespace std;
+pair<int,int>student[1000*1000];
+int cnt[1000*1000];
+int main()
+{
+	int n;//학급의 수  
+	int m;//학급의 학생의 수 
+	scanf("%d%d",&n,&m);
+	int index=0;  
+	for(int i=0;i<n;i++)
+	{
+		for(int j=0;j<m;j++)
+		{
+			int a;
+			scanf("%d",&a);
+			student[index++]={a,i};
+		}
+	} 
+	sort(student,student+n*m);
+	int num=0;
+	int s=0;
+	int e=0;
+	int ans=1234567890;
+	while(e<n*m)
+	{
+		if(cnt[student[e].second]==0)
+		{
+			num++;
+		}
+		cnt[student[e].second]++;
+		while(num==n)
+		{
+			ans=min(ans,student[e].first-student[s].first);
+			cnt[student[s].second]--;
+			if(cnt[student[s].second]==0)
+			{
+				num--;
+			}
+			s++;
+		}
+		e++;
+	}
+	printf("%d",ans);
+	return 0;
+}
+
+#include <cstdio>
+#include <algorithm>
+
+using namespace std;
+
+int arr[60010];
+int cnt[3010];
+int now;
+
+void In(int a)
+{
+    if(!cnt[a])
+        now++;
+    cnt[a]++;
+}
+
+void Out(int a)
+{
+    cnt[a]--;
+    if(!cnt[a])
+        now--;
+}
+
+int main()
+{
+    int n, d, k, c;
+    scanf("%d%d%d%d", &n, &d, &k, &c);
+
+    for(int i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+
+    // 쿠폰 초밥 미리 추가
+    In(c);
+
+    // 첫 윈도우 구성
+    for(int i = 0; i < k - 1; i++)
+        In(arr[i]);
+
+    int ans = 0;
+
+    for(int i = 0; i < n; i++)
+    {
+        In(arr[(i + k - 1) % n]); // ★ 원형 처리 필수
+        ans = max(ans, now);
+        Out(arr[i]);
+    }
+
+    printf("%d\n", ans);
+    return 0;
+}
